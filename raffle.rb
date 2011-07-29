@@ -10,9 +10,9 @@ class Entry
 
 	include DataMapper::Resource
 	property :id, 			Serial
-	property :first, 		String
-	property :last, 		String
-	property :email, 		String
+	property :first, 		String, :required => true
+	property :last, 		String, :required => true
+	property :email, 		String, :required => true, :unique => true
 	property :created_at,	DateTime	
 
 end
@@ -34,6 +34,7 @@ enable :sessions
 
 get '/' do
 	@title = "Enter to win a rad Timbuk2 bag!"
+	@errors = session[:errors]
 	erb :welcome
 end
 
@@ -43,6 +44,7 @@ post '/' do
 	if @entry.save
 		redirect('/thanks')
 	else
+		session[:errors] = @entry.errors.values.map{|e| e.to_s}
 		redirect('/')
 	end
 end
