@@ -1,0 +1,53 @@
+/* ======================================================================================================== reset CSS ===
+
+html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+html5doctor.com/html-5-reset-stylesheet/
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em,
+img, ins, kbd, q, samp, small, strong, sub,
+sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td
+                                {    margin:0; padding:0; border:0; outline:0; font-size:100%; 
+                                     vertical-align:baseline; background:transparent;   }
+ul                              {    list-style:none;   }
+a                               {    margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+/* tables still need cellspacing="0" in the markup */ 
+table                           {    border-collapse:collapse; border-spacing:0;        }
+hr                              {    display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+input, select                   {    vertical-align:middle;     }
+
+/* ==================================================================================================== end reset CSS ===
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error		{    color: #ff0000;    }
+
+.field-validation-valid         {    display: none;     }
+
+.input-validation-error         {    border: 1px solid #ff0000; background-color: #ffeeee;   }
+
+.validation-summary-errors      {    font-weight: bold; color: #ff0000;     }
+
+.validation-summary-valid       {    display: none;     }
+
+.clear                          {    clear: both;       }
+
+.round                          {    -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;        }
+
+.clearfix                       {    display: block;    }
+.clearfix:after                 {    content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+/* end predefined styles */
+
+
+body	 				{ background-color: white; }
+#raffle_ticket	 		{ background-image: url('../images/414.png'); background-repeat: no-repeat; width: 750px; height: 414px; padding: 30px; margin: 50px auto; }
+#first	 				{ margin: 30px 70px 20px; width: 70%; }
+.textBox	 			{ margin: 10px 70px; width: 70%; font-size: 30pt; height: 60px; background: none; border: none; text-shadow: 0.1em 0.05em 0.2em black }
+#enter	 				{ margin: 10px auto; text-align: center; font-size: 30pt; }
+.rotated				{ -webkit-transform: rotate(-90deg); font-size: 45pt; float: left; margin: 140px;}
+.round 					{ -webkit-border-radius: 15px;}

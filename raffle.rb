@@ -30,6 +30,8 @@ helpers do
 	include Sinatra::Authorization
 end
 
+enable :sessions
+
 get '/' do
 	@title = "Enter to win a rad Timbuk2 bag!"
 	erb :welcome
