@@ -1,0 +1,9 @@
+<h1><%= @title %></h1>
+
+<table border="0" cellpadding="0" cellspacing="10" class="list">
+<% @entries.each_with_index do |entry, i| %>
+	<tr<%= ' class="alt"' if i%2==0 %>>
+		<td><p><%= entry.first %> <%= entry.last %>: <%= entry.email %></p></td>
+		<td><a href="/delete/<%= entry.id %>">delete</a></td>
+<% end %>
+</table>

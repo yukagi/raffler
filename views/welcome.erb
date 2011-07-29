@@ -1,0 +1,24 @@
+<div id="raffle_ticket" class="round">
+	<form action="/" method="post" id="entry">
+	<div>
+		<input type="text" placeholder="First Name" id="first" class="textBox" name="entry[first]" />
+	</div>	
+	<div>
+			<input type="text" placeholder="Last Name" class="textBox" name="entry[last]" />
+	</div>
+	<div>
+			<input type="text" placeholder="Apple Email Address" class="textBox" name="entry[email]" />
+	</div>
+	<div id="enter" class="round">
+		<input type="submit">
+	</div>
+</form>
+</div>
+
+<% if @errors %>
+<div id="errors">
+    <%@errors.each do |e| %>
+       <p><%= e %></p>
+    <% end %>
+</div>
+<% end %>
