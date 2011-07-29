@@ -15,6 +15,16 @@ class Entry
 	property :email, 		String, :required => true, :unique => true
 	property :created_at,	DateTime	
 
+	validates_with_method :email, :method => :isAppleEmail?
+
+	def isAppleEmail?
+		if @email =~ /\A[^@\s]+(@apple.com)\Z/
+			return true
+		else
+		 	return [false, "You must enter your Apple email address"]
+		end
+	end
+
 end
 
 configure :development do
