@@ -1,3 +1,4 @@
 sinatra
 data_mapper
 pony
+dm-sqlite-adapter
