@@ -49,5 +49,6 @@ body	 				{ background-color: white; }
 #first	 				{ margin: 30px 70px 20px; width: 70%; }
 .textBox	 			{ margin: 10px 70px; width: 70%; font-size: 30pt; height: 60px; background: none; border: none; text-shadow: 0.1em 0.05em 0.2em black }
 #enter	 				{ margin: 10px auto; text-align: center; font-size: 30pt; }
-.rotated				{ -webkit-transform: rotate(-90deg); font-size: 45pt; float: left; margin: 140px;}
-.round 					{ -webkit-border-radius: 15px;}
+.rotated				{ -webkit-transform: rotate(-90deg); font-size: 55pt; float: left; margin: 130px -55px 0;}
+.round 					{ -webkit-border-radius: 15px; }
+.thanks					{ font-size: 70pt; text-align: center; width: 300px; margin: 50px auto; line-height: 90%;}
