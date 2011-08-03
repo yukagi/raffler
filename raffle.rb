@@ -57,6 +57,9 @@ class Raffler < Sinatra::Base
 			session[:id] = @entry.id
 			session[:first] = @entry.first
 			
+			puts "ID: #{@entry.id}"
+			puts "Session ID: #{session[:id]}"
+
 			redirect('/thanks')
 		else
 			session[:errors] = @entry.errors.values.map{|e| e.to_s}
@@ -65,14 +68,15 @@ class Raffler < Sinatra::Base
 	end
 
 	get '/thanks' do
+		puts "Thanks ID: #{session[:id]}"
 		@id = session[:id]
 		@first = session[:first]
 		@entry = Entry.get(@id)
 
-		Pony.mail(:to => @entry.email, :from => "example@raffler.com", 
-						:subject => "Thanks for entering!", 
-						:headers => { "Content-Type" => "text/html" },
-						:body => (erb :thanks))
+#		Pony.mail(:to => @entry.email, :from => "example@raffler.com", 
+#						:subject => "Thanks for entering!", 
+#						:headers => { "Content-Type" => "text/html" },
+#						:body => (erb :thanks))
 		erb :thanks
 	end
 
