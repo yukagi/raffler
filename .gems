@@ -2,3 +2,4 @@ sinatra
 data_mapper
 pony
 dm-sqlite-adapter
+dm-postgres-adapter
