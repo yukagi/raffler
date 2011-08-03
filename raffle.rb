@@ -6,7 +6,8 @@ require 'lib/authorization'
 require 'pony'
 
 class Raffler < Sinatra::Base
-	DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/entries.db")
+#	DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/entries.db")
+	DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 	class Entry
 
