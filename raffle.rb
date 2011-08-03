@@ -7,7 +7,7 @@ require 'pony'
 
 class Raffler < Sinatra::Base
 #	DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/entries.db")
-	DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+	DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/entries')
 
 	class Entry
 
@@ -27,6 +27,9 @@ class Raffler < Sinatra::Base
 			 	return [false, "You must enter your Apple email address"]
 			end
 		end
+
+		# This was just added.... not sure if it's REALLY necessary
+		DataMapper.finalize
 
 	end
 
