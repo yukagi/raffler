@@ -29,10 +29,6 @@ class Raffler < Sinatra::Base
 			 	return [false, "You must enter your Apple email address"]
 			end
 		end
-
-		# This was just added.... not sure if it's REALLY necessary
-		DataMapper.finalize
-
 	end
 
 	configure :development do

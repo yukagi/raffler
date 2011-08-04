@@ -3,3 +3,4 @@ data_mapper
 pony
 dm-sqlite-adapter
 dm-postgres-adapter
+dm-do-adapter
