@@ -12,6 +12,7 @@ class Raffler < Sinatra::Base
 	# 'postgres://#{Dir.pwd}/log/entries'
 
 	set :static, true
+	set :root, File.dirname(__FILE__)
 
 	class Entry
 
