@@ -12,8 +12,7 @@ class Raffler < Sinatra::Base
 	# 'postgres://#{Dir.pwd}/log/entries'
 
 	set :static, true
-	set :root, File.dirname(__FILE__)
-	set :app_file, __FILE__
+	set :root, Raffler.root
 
 	class Entry
 
@@ -65,6 +64,8 @@ class Raffler < Sinatra::Base
 			
 			puts "ID: #{@entry.id}"
 			puts "Session ID: #{session[:id]}"
+			puts "#{Dir.pwd}"
+
 
 			redirect('/thanks')
 		else
