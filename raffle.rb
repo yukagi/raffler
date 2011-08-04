@@ -11,9 +11,6 @@ class Raffler < Sinatra::Base
 	# This is the code for connecting to Postgres with a hard-coded path, not currently working.
 	# 'postgres://#{Dir.pwd}/log/entries'
 
-	set :static, true
-	set :root, Raffler.root
-
 	class Entry
 
 		include DataMapper::Resource
@@ -37,6 +34,11 @@ class Raffler < Sinatra::Base
 	configure :development do
 		# Create or upgrade all tables at once
 		DataMapper.auto_upgrade!
+	end
+
+	configure do
+		set :static, true
+		set :root, Raffler.root
 	end
 
 	before do
