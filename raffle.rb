@@ -13,6 +13,7 @@ class Raffler < Sinatra::Base
 
 	set :static, true
 	set :root, File.dirname(__FILE__)
+	set :app_file, __FILE__
 
 	class Entry
 
