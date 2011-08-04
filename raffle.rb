@@ -11,6 +11,8 @@ class Raffler < Sinatra::Base
 	# This is the code for connecting to Postgres with a hard-coded path, not currently working.
 	# 'postgres://#{Dir.pwd}/log/entries'
 
+	set :static, true
+
 	class Entry
 
 		include DataMapper::Resource
