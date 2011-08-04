@@ -1,6 +1,7 @@
 sinatra
 data_mapper
 pony
-dm-sqlite-adapter
+dm-validations
+dm-core
 dm-postgres-adapter
 dm-do-adapter
