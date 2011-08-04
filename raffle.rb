@@ -39,7 +39,7 @@ class Raffler < Sinatra::Base
 	configure do
 		set :static, true
 		set :root, Raffler.root
-		set :public, Proc.new { File.join(root, "static") }
+		set :public, Proc.new { File.join(:root, "static") }
 	end
 
 	before do
