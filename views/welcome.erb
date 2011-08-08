@@ -1,13 +1,13 @@
 <div id="raffle_ticket" class="round">
 	<form action="/" method="post" id="entry">
 	<div>
-		<input type="text" placeholder="First Name" id="first" class="textBox tk-bad-dog" name="entry[first]" />
+		<input type="text" placeholder="First Name" id="first" class="textBox tk-daniel" name="entry[first]" />
 	</div>	
 	<div>
-			<input type="text" placeholder="Last Name" class="textBox tk-bad-dog" name="entry[last]" />
+			<input type="text" placeholder="Last Name" class="textBox tk-daniel" name="entry[last]" />
 	</div>
 	<div>
-			<input type="text" placeholder="Apple Email Address" class="textBox tk-bad-dog" name="entry[email]" />
+			<input type="text" placeholder="Apple Email Address" class="textBox tk-daniel" name="entry[email]" />
 	</div>
 	<div id="enter" class="round">
 		<input type="submit">
@@ -16,9 +16,10 @@
 </div>
 
 <% if @errors %>
-<div id="errors">
+<div id="errors" class="round errorField">
     <%@errors.each do |e| %>
        <p><%= e %></p>
     <% end %>
 </div>
 <% end %>
+

@@ -5,11 +5,10 @@ require 'data_mapper'
 require 'lib/authorization'
 require 'pony'
 
+
 class Raffler < Sinatra::Base
 #	DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/entries.db")
-	DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://#{Dir.pwd}/entries.db')
-	# This is the code for connecting to Postgres with a hard-coded path, not currently working.
-	# 'postgres://#{Dir.pwd}/log/entries'
+	DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/entries.db")
 
 	class Entry
 
@@ -38,8 +37,7 @@ class Raffler < Sinatra::Base
 
 	configure do
 		set :static, true
-		set :root, Raffler.root
-		set :public, Proc.new { File.join(:root, "public") }
+		set :public, File.dirname(__FILE__) + '/public'
 	end
 
 	before do
