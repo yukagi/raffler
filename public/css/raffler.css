@@ -54,5 +54,5 @@ body	 				{ background-color: white; }
 .thanks					{ font-size: 70pt; text-align: center; width: 300px; margin: 50px auto; line-height: 90%;}
 .errorField					{ border-style: solid; border-width: 2px; border-color: #73281e; margin: 10px auto; width: 225px; text-align: center; padding: 10px; background: #914527;}
 .submit					{ color: black; }
-.submit:hover			{ color: gray; text-shadow: 0.1em 0.05em 0.2em black }
+.submit:hover			{ text-shadow: 0.1em 0.05em 0.2em black }
 
