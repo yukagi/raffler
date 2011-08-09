@@ -1,4 +1,10 @@
 <div id="raffle_ticket" class="round">
+<script type="text/javascript">
+function submitform()
+{
+    document.forms["entry"].submit();
+}
+</script>
 	<form action="/" method="post" id="entry">
 	<div>
 		<input type="text" placeholder="First Name" id="first" class="textBox tk-daniel" name="entry[first]" />
@@ -9,8 +15,8 @@
 	<div>
 			<input type="text" placeholder="Apple Email Address" class="textBox tk-daniel" name="entry[email]" />
 	</div>
-	<div id="enter" class="round submit decorative">
-		Enter
+	<div id="enter" class="round">
+		<a href="javascript: submitform()" class="submit decorative">Enter</a>
 	</div>
 </form>
 </div>

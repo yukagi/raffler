@@ -44,6 +44,8 @@ input, select                   {    vertical-align:middle;     }
 /* end predefined styles */
 
 
+a.link					{ text-decoration: none; }
+
 body	 				{ background-color: white; }
 #raffle_ticket	 		{ background-image: url('../images/414.png'); background-repeat: no-repeat; width: 750px; height: 414px; padding: 30px; margin: 50px auto; }
 #first	 				{ margin: 30px 70px 20px; width: 70%; }
@@ -53,6 +55,6 @@ body	 				{ background-color: white; }
 .round 					{ -webkit-border-radius: 15px; }
 .thanks					{ font-size: 70pt; text-align: center; width: 300px; margin: 50px auto; line-height: 90%;}
 .errorField					{ border-style: solid; border-width: 2px; border-color: #73281e; margin: 10px auto; width: 225px; text-align: center; padding: 10px; background: #914527;}
-.submit					{ color: gray; }
+.submit					{ width: 150px; color: #666666; }
 .submit:hover			{ color: black; }
 
