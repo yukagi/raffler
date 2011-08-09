@@ -52,6 +52,6 @@ body	 				{ background-color: white; }
 .rotated				{ -webkit-transform: rotate(-90deg); font-size: 55pt; float: left; margin: 130px -40px 0;}
 .round 					{ -webkit-border-radius: 15px; }
 .thanks					{ font-size: 70pt; text-align: center; width: 300px; margin: 50px auto; line-height: 90%;}
-.errorField					{ border-style: solid; border-width: 2px; border-color: red; margin: auto; width: 225px; text-align: center; padding: 10px; }
+.errorField					{ border-style: solid; border-width: 2px; border-color: #73281e; margin: auto; width: 225px; text-align: center; padding: 10px; background: #914527;}
 
 
