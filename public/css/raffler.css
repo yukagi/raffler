@@ -47,7 +47,7 @@ input, select                   {    vertical-align:middle;     }
 a.link					{ text-decoration: none; }
 
 body	 				{ background-color: white; }
-#raffle_ticket	 		{ background-image: url('../images/414.jpg'); background-repeat: no-repeat; width: 750px; height: 414px; padding: 30px; margin: 50px auto; }
+#raffle_ticket	 		{ background-image: url('../images/121.png'); background-repeat: no-repeat; width: 750px; height: 414px; padding: 30px; margin: 50px auto; }
 #first	 				{ margin: 30px 70px 20px; width: 70%; }
 .textBox	 			{ margin: 10px 70px; width: 70%; font-size: 30pt; height: 60px; background: none; border: none; text-shadow: 0.1em 0.05em 0.2em black }
 #enter	 				{ margin: 10px auto; text-align: center; font-size: 30pt; }
