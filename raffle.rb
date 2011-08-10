@@ -62,7 +62,7 @@ class Raffler < Sinatra::Base
 		if @entry.save
 			session[:id] = @entry.id
 			session[:first] = @entry.first
-			
+			 
 			puts "ID: #{@entry.id}"
 			puts "Session ID: #{session[:id]}"
 			puts "#{Dir.pwd}"
@@ -102,6 +102,14 @@ class Raffler < Sinatra::Base
 		end
 		redirect('/list')
 	end
+
+	get '/winner' do
+		require_admin
+		@title = "Winners"
+		@entries = Entry.all(:order => [:created_at.desc])
+		erb :winner
+	end
+
 end
 
 
