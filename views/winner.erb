@@ -1,9 +1,8 @@
 <h1><%= @title %></h1>
-
-<table border="0" cellpadding="0" cellspacing="10" class="list">
+<div id="winnerButton">Choose Winner</div><br />
+<table border="0" cellpadding="0" cellspacing="10" class="list" id="winnerTable">
 <% @entries.each_with_index do |entry, i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
-		<td class="<%= i %>"><p><%= i %>: <%= entry.first %> <%= entry.last %>: <%= entry.email %></p></td>
-		<td><a href="/delete/<%= entry.id %>">delete</a></td>
+		<td class="entry-<%= i %>"><p><%= i %> : R12500<%= entry.id %></p></td>
 <% end %>
 </table>
