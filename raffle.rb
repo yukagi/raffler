@@ -42,8 +42,6 @@ class Raffler < Sinatra::Base
 
 	before do
 		headers "Content-Type" => "text/html; charset=utf-8"
-		headers "Access-Control-Allow-Origin" => "http://thegateway.heroku.com"
-		headers "Access-Control-Request-Method" => "*"
 	end
 
 	helpers do

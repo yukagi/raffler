@@ -59,6 +59,6 @@ body	 				{ background-color: white; }
 .submit:hover			{ color: black; }
 #winnerButton			{ border-style: solid; border-width: 2px; border-color: black; text-align: center; width: 120px; }
 #winnerButton:hover		{ background: black; color: white; }
-.winner					{ background-color: blue; }
-.alt 					{ background-color: gray; }
+.winner					{ background-color: red; }
+
 
