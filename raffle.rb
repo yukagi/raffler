@@ -16,7 +16,7 @@ class Raffler < Sinatra::Base
 		property :id, 			Serial
 		property :first, 		String, :required => true
 		property :last, 		String, :required => true
-		property :email, 		String, :required => true
+		property :email, 		String, :required => true, :unique => true
 		property :created_at,	DateTime	
 
 	#	validates_with_method :email, :method => :isAppleEmail?
@@ -81,10 +81,10 @@ class Raffler < Sinatra::Base
 		@first = session[:first]
 		@entry = Entry.get(@id)
 
-#		Pony.mail(:to => @entry.email, :from => "example@raffler.com", 
-#						:subject => "Thanks for entering!", 
-#						:headers => { "Content-Type" => "text/html" },
-#						:body => (erb :thanks))
+		Pony.mail(:to => @entry.email, :from => "example@raffler.com", 
+						:subject => "Thanks for entering!", 
+						:headers => { "Content-Type" => "text/html" },
+						:body => "Thank you for entering. I'll let you know the winners when they are decided.")
 		erb :thanks
 	end
 
